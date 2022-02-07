@@ -41,7 +41,7 @@ export const StartGameView = (props: {
   // const [languageModalVisible, setLanguageModalVisible] = React.useState(false);
   const [levelModalVisible, setLevelModalVisible] = React.useState(false);
   const [timerModalVisible, setTimerModalVisible] = React.useState(false);
-  const [dictionary, setDictionary] = React.useState<Dictionary>(
+  const [dictionary] = React.useState<Dictionary>(
     props.defaultSettings.dictionary,
   );
   const [level, setLevel] = React.useState(props.defaultSettings.difficulty);

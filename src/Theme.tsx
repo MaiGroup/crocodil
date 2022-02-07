@@ -29,6 +29,9 @@ export const GStyle = StyleSheet.create<any>({
   spaceBetween: {
     justifyContent: 'space-between',
   },
+  justifyCenter: {
+    justifyContent: 'center',
+  },
   center: {
     alignItems: 'center',
   },

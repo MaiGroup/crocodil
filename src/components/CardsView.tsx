@@ -78,7 +78,7 @@ export const CardsView = (props: {settings: GameSettings; onBack(): void}) => {
               {selectedWord.difficulty}
             </Text>
           </View>
-          <Paragraph style={[GStyle.text, {textAlign: 'center'}]}>
+          <Paragraph style={[GStyle.text, styles.textCenter]}>
             {hideWord ? _maskString(selectedWord.desc, '*') : selectedWord.desc}
           </Paragraph>
         </View>
@@ -158,7 +158,7 @@ const Countdown = (props: {
         return (
           <View key="text" style={GStyle.center}>
             <Text style={styles.textColor}>Remaining</Text>
-            <Text style={[styles.textColor, {fontSize: 35}]}>
+            <Text style={[styles.textColor, styles.fontS35]}>
               {Math.floor(remainingTime / 60) + ':' + (remainingTime % 60)}
             </Text>
           </View>
@@ -176,7 +176,7 @@ const TimeOutModal = (props: {visible: boolean; onDismiss(): void}) => {
         onDismiss={props.onDismiss}
         contentContainerStyle={styles.modal}>
         <View>
-          <View style={[GStyle.row, {justifyContent: 'center'}]}>
+          <View style={[GStyle.row, GStyle.justifyCenter]}>
             <IconButton icon={'timer-off'} />
             <Headline>TIME OUT</Headline>
           </View>
@@ -238,6 +238,9 @@ const styles = StyleSheet.create({
   textColor: {
     color: 'white',
   },
+  fontS35: {
+    fontSize: 35,
+  },
   modal: {
     borderRadius: 5,
     backgroundColor: 'white',
@@ -251,5 +254,8 @@ const styles = StyleSheet.create({
   counterLine: {
     alignItems: 'flex-start',
     width: Dimensions.get('window').width,
+  },
+  textCenter: {
+    textAlign: 'center',
   },
 });
