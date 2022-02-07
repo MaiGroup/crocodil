@@ -30,6 +30,7 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: yarn run lint
+    - run: "chmod 777 -R ./*"
     - run: yarn run android:bundleRelease
 
 #    - name: Release
