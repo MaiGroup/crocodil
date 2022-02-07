@@ -30,12 +30,12 @@ jobs:
       - run: npm install
       - run: yarn run lint
       - run: yarn run android:bundleRelease
-
-    - name: Release
-      uses: "marvinpinto/action-automatic-releases@latest"
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        prerelease: false
-        files: |
-          LICENSE.txt
-          *.aab
+#
+#    - name: Release
+#      uses: "marvinpinto/action-automatic-releases@latest"
+#      with:
+#        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+#        prerelease: false
+#        files: |
+#          LICENSE.txt
+#          *.aab
