@@ -18,8 +18,8 @@ jobs:
       matrix:
         node-version: [16.x]
     steps:
-    - name: Permissions
-      run: "chmod 777 -R ./* ./.[!.]*"
+#    - name: Permissions
+#      run: "chmod 777 -R ./* ./.[!.]*"
     - name: Files
       run: ls
     - uses: actions/checkout@v2
