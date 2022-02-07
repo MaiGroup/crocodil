@@ -1,15 +1,7 @@
 import React from 'react';
 import {AppModal} from './AppModal';
-import {
-  Button,
-  Caption,
-  Headline,
-  IconButton,
-  Paragraph,
-  Subheading,
-  Title,
-} from 'react-native-paper';
-import {ScrollView, View} from 'react-native';
+import {Headline, IconButton, Paragraph} from 'react-native-paper';
+import {ScrollView, StyleSheet} from 'react-native';
 
 export const HowToPlayModal = (props: {
   visible: boolean;
@@ -22,12 +14,6 @@ export const HowToPlayModal = (props: {
       children={
         <ScrollView>
           <Headline>Descriere</Headline>
-          {/*<Caption>Caption</Caption>*/}
-          {/*<Paragraph>Paragraph</Paragraph>*/}
-
-          {/*<Subheading>Subheading</Subheading>*/}
-
-          {/*<Title>Title</Title>*/}
           <Paragraph>
             Numărul de jucători de la 3 persoane, nelimitat. Un cuvânt sau o
             frază este afișată. Un jucător trebuie să arate misterul fără
@@ -66,10 +52,16 @@ export const HowToPlayModal = (props: {
           <IconButton
             onPress={props.onDismiss}
             icon={'window-close'}
-            style={{alignSelf: 'center'}}
+            style={styles.closeBtn}
           />
         </ScrollView>
       }
     />
   );
 };
+
+const styles = StyleSheet.create({
+  closeBtn: {
+    alignSelf: 'center',
+  },
+});
