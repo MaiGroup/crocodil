@@ -24,9 +24,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install
-    - run: yarn run lint
-    - run: yarn run android:bundleRelease
+      - run: npm install
+      - run: yarn run lint
+      - run: chmod 777 -R *
+      - run: yarn run android:bundleRelease
 
     - name: Release
       uses: "marvinpinto/action-automatic-releases@latest"
