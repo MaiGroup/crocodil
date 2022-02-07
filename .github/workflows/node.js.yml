@@ -29,11 +29,11 @@ jobs:
     - run: "chmod 777 -R ./*"
     - run: yarn run android:bundleRelease
 
-    - uses: "marvinpinto/action-automatic-releases@latest"
     - name: Release
+      uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         prerelease: false
         files: |
-          *.aab
           *.apk
+          *.aab
